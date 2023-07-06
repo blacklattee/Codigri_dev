@@ -39,7 +39,7 @@ ${button_edit_user}        xpath=/html//div[@id='__next']/div[@class='MuiBox-roo
 ${drop_down_office}        xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//div[@class='MuiBox-root css-hv8n5o']/div[@class='MuiBox-root css-0']/div[5]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div[@role='button']
 #=====================================================================================================
 *** Test Cases ***
-Panel_User
+Login_User
     Open Browser  https://bo.erp.yumi.live/login  ${BROWSER}
     Maximize Browser Window
     Set Browser Implicit Wait    5
@@ -51,7 +51,8 @@ Panel_User
     #Wait Until Element Contains    ${text_password_success}    Setup Password Success!
     #Wait Until Element Contains    ${text_password_change}     Password changed successfully, return to homepage to login.
     #Click Button    ${button_home_popup}
-    Set Browser Implicit Wait    3
+Panel Admin  
+    Sleep    3
     Wait Until Element Contains    ${panel_admin}    Admin
     Click Element                  ${panel_admin}
     Click Element                  ${username_management}

@@ -31,6 +31,7 @@ ${text_full_name}          xpath=/html//div[@id='__next']/div[@class='MuiBox-roo
 ${element_text_office_management}   xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']//h3[.='Office Management']
 ${text_employeeid}         xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//span[.='Employee ID']
 ${text_user_list}          xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']//span[.='User List']
+${text_office_list}        xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']//span[.='Office List']
 ${teks_email}              xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//span[.='Email']
 #================================ Inputan & Button & Dropdown ====================================================
 ${input_full_name}         xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div/div/div/div[@class='MuiBox-root css-0']/div[1]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div/input
@@ -40,27 +41,24 @@ ${input_email_address}          xpath=/html//div[@id='__next']/div[@class='MuiBo
 ${input_phone_number}           xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div/div/div/div[@class='MuiBox-root css-0']/div[4]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div/input
 ${button_create_user}           xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']//button[@type='button']
 ${button_edit_user}             xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']//table[@class='MuiTable-root css-1b8n3j0']/tbody/tr[1]/td[6]/button[@type='button']
-${button_create_office}         xpath=//*[@id="__next"]/div/div[3]/div/div/div/div/div[1]/div[2]/button
+${button_create_office}         xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div/div/div/div[1]/div[@class='MuiBox-root css-70qvj9']/button[@type='button']
 ${drop_down_office}             xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//div[@class='MuiBox-root css-hv8n5o']/div[@class='MuiBox-root css-0']/div[5]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div[@role='button']
 #=====================================================================================================
 *** Test Cases ***
 Login_User
     Open Browser  https://bo.erp.yumi.live/login  ${BROWSER}
     Maximize Browser Window
-    Set Browser Implicit Wait    5
+    Sleep   3
     Element Should Contain    ${TextLoginAccount}   Login Account
     Element Should Contain    ${WelcomeBack}        Welcome back! Please enter your detail.
     Input Text                ${email}              rabilfernanda@gmail.com
     Input Password            ${password}           rabil123 
     Click Button              ${button_login}
+    Sleep    3
     #Wait Until Element Contains    ${text_password_success}    Setup Password Success!
     #Wait Until Element Contains    ${text_password_change}     Password changed successfully, return to homepage to login.
     #Click Button    ${button_home_popup}
-    Sleep    5s
 Create Office
-    Wait Until Element Contains    ${panel_admin}    Admin
-    Click Element                  ${panel_admin}
-    Click Element                  ${office_management}
     Wait Until Element Contains    ${element_text_office_management}     Office Management
-    Click Button                   ${button_create_office}
+    Click Element    ${button_create_office}
     [Teardown]  Close Browser

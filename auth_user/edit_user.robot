@@ -42,19 +42,21 @@ ${drop_down_office}        xpath=/html//div[@id='__next']/div[@class='MuiBox-roo
 Login_User
     Open Browser  https://bo.erp.yumi.live/login  ${BROWSER}
     Maximize Browser Window
-    Set Browser Implicit Wait    5
+    Sleep    5
+
     Element Should Contain    ${TextLoginAccount}   Login Account
     Element Should Contain    ${WelcomeBack}        Welcome back! Please enter your detail.
     Input Text                ${email}              rabilfernanda@gmail.com
     Input Password            ${password}           rabil123 
     Click Button              ${button_login}
+    Sleep    3
 
-Edit User
-    Set Browser Implicit Wait    5
-    Wait Until Element Contains    ${panel_admin}            Admin
+Panel Admin
+    Wait Until Element Contains    ${panel_admin}    Admin
     Click Element                  ${panel_admin}
-    Click Element                  ${text_user_management}
-    Wait Until Element Contains    ${text_user_management}   User Management
+    Click Element                  ${username_management}
+    Sleep    5s
+
     Click Button                   ${button_edit_user}
     #Wait Until Element Contains    ${text_password_success}    Setup Password Success!
     #Wait Until Element Contains    ${text_password_change}     Password changed successfully, return to homepage to login.

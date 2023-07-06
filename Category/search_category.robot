@@ -14,8 +14,9 @@ ${username_management}     xpath=//*[@id="panel1a-content"]/div/a[1]
 ${company_management}      xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1ewveix']/div/div[1]/div[4]/div/div[2]//div[@role='region']//a[@href='/admin/company']
 ${panel_admin}             xpath=//div[@id='panel1a-header']/div[@class='MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-17o5nyn']
 ${list_office}             xpath=//div[@id='menu-']//ul[@role='listbox']/li[1]
-
-
+${panel_product}           xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1ewveix']/div/div[1]/div[5]/div/div[@role='button']/div[1]/div[.='Product']
+${master_product}          xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1ewveix']/div/div[1]/div[5]/div/div[2]//div[@role='region']//a[@href='/product/master-product']
+${master_category}         xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1ewveix']/div/div[1]/div[5]/div/div[2]//div[@role='region']//a[@href='/product/category']
 #============================== Wait Until Element ==================================================
 ${text_phone_number}        xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//span[.='Phone Number']
 ${text_user_management}     xpath=//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']//h3[.='User Management']
@@ -28,19 +29,18 @@ ${text_password_change}     xpath=//div[@id='__next']/div/div/div/div/p
 ${text_password_success}    xpath=//div[@id='__next']/div/div/div/div/h1
 ${text_pass}                id=mui-2
 ${text_email}               id=mui-1  
+${element_create_master_product}    xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']//h3[.='Create Master Product']
+${element_master_product}   xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']//h3[.='Master Product']
+${element_master_category}  xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']//h3[.='Category']
+${text_office_management}   xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']//h3[.='Office Management']
+${text_category}            xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']//span[@class='MuiTypography-root MuiTypography-xxxlSemiBold css-1ird22q']
 ${TextLoginAccount}         xpath=//div[@id='__next']/div/div/div/section/div/h2 
 ${text_full_name}           xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//span[.='Full Name']
 ${text_email_company}       xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//span[.='Email']
 ${text_employeeid}          xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//span[.='Employee ID']
+${text_description_master_category}    xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div/div//div[@class='MuiBox-root css-hv8n5o']/div[@class='MuiBox-root css-0']/div[3]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div/textarea[1]
 ${teks_email}               xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//span[.='Email']
 #================================ Inputan & Button & Dropdown ====================================================
-${province}                xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//div[@class='MuiBox-root css-hv8n5o']/div[@class='MuiBox-root css-0']/div[5]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div[@role='button']
-${regency}                 xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//div[@class='MuiBox-root css-hv8n5o']/div[@class='MuiBox-root css-0']/div[6]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div[@role='button']
-${district}                xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//div[@class='MuiBox-root css-hv8n5o']/div[@class='MuiBox-root css-0']/div[7]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div[@role='button']
-${sub_district}            xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//div[@class='MuiBox-root css-hv8n5o']/div[@class='MuiBox-root css-0']/div[8]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div[@role='button']
-${status_company}          xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//div[@class='MuiBox-root css-hv8n5o']/div[@class='MuiBox-root css-0']/div[11]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div[@role='button']
-${input_street_name}       xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div/div/div/div[@class='MuiBox-root css-0']/div[9]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div/input
-${input_postal_code}       xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div/div/div/div[@class='MuiBox-root css-0']/div[10]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div/input
 ${input_full_name}         xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div/div/div/div[@class='MuiBox-root css-0']/div[1]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div/input
 ${input_employee_id}       xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div/div/div/div[@class='MuiBox-root css-0']/div[2]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div/input
 ${input_email_address}     xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div/div/div/div[@class='MuiBox-root css-0']/div[3]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div/input
@@ -49,13 +49,24 @@ ${input_website_name}      xpath=/html//div[@id='__next']/div[@class='MuiBox-roo
 ${input_phone_number}      xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div/div/div/div[@class='MuiBox-root css-0']/div[4]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div/input
 ${button_create_user}      xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']//button[@type='button']
 ${button_create_company}   xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']//div[@class='MuiBox-root css-l0oxgq']/div/div[1]/div[@class='MuiBox-root css-70qvj9']/button[@type='button']
-${button_accept_company}   xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']//button[@type='button']
 ${input_company_name}      xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div/div/div/div[@class='MuiBox-root css-0']/div[1]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div/input
-${choose_province}         xpath=//div[@id='menu-']//ul[@role='listbox']/li[5]
-${choose_regency}          xpath=//div[@id='menu-']//ul[@role='listbox']/li[5]
-${choose_district}         xpath=//div[@id='menu-']//ul[@role='listbox']/li[5]
-${choose_sub_district}     xpath=//div[@id='menu-']//ul[@role='listbox']/li[5]
-${choose_status_company}   xpath=//div[@id='menu-']//ul[@role='listbox']/li[2]
+${button_create_product}   xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//div[@class='MuiBox-root css-1xgp44y']/button[1]
+${button_create_category}  xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div/div/div[@class='MuiBox-root css-0']/div/div[1]/div[@class='MuiBox-root css-70qvj9']/button[@type='button']
+${list_dropdown_brand}     xpath=//div[@id='menu-']//ul[@role='listbox']/li[2]
+${list_dropdown_category}  xpath=//div[@id='menu-']//ul[@role='listbox']/li[2]
+${status_dropdown_master_product}   xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//div[@class='MuiBox-root css-hv8n5o']/div[@class='MuiBox-root css-0']/div[4]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div[@role='button']
+${status_category}         xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div/div//div[@role='button']
+${status_dropdown_master_product}   xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//div[@class='MuiBox-root css-hv8n5o']/div[@class='MuiBox-root css-0']/div[2]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div[@role='button']
+${input_name_product}      xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div/div/div/div[@class='MuiBox-root css-0']/div[1]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div/input
+${input_name_category}     xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div/div//div[@class='MuiBox-root css-hv8n5o']/div[@class='MuiBox-root css-0']/div[1]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div/input
+${dropdown_brand}          xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//div[@class='MuiBox-root css-hv8n5o']/div[@class='MuiBox-root css-0']/div[2]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div[@role='button']
+${dropdown_category}       xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//div[@class='MuiBox-root css-hv8n5o']/div[@class='MuiBox-root css-0']/div[3]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div[@role='button']
+${descript_master_product}  xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div/div/div/div[@class='MuiBox-root css-0']/div[5]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div/textarea[1]
+${active_master_prodcut}   xpath=//div[@id='menu-']//ul[@role='listbox']/li[2]
+${active_master_category}  xpath=//div[@id='menu-']//ul[@role='listbox']/li[2]
+${button_master_product}   xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']//button[@type='button']
+${button_master_category}  xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']//button[@type='button']
+${search_master_category}   xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//input
 ${drop_down_office}        xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//div[@class='MuiBox-root css-hv8n5o']/div[@class='MuiBox-root css-0']/div[5]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div[@role='button']
 #=====================================================================================================
 
@@ -63,73 +74,23 @@ ${drop_down_office}        xpath=/html//div[@id='__next']/div[@class='MuiBox-roo
 Login_User
     Open Browser  https://bo.erp.yumi.live/login  ${BROWSER}
     Maximize Browser Window
-    Sleep    5
+    Sleep   5
     Element Should Contain    ${TextLoginAccount}   Login Account
     Element Should Contain    ${WelcomeBack}        Welcome back! Please enter your detail.
     Input Text                ${email}              rabilfernanda@gmail.com
     Input Password            ${password}           rabil123 
     Click Button              ${button_login}
+    Sleep    1
+Search Category
+    Wait Until Element Contains    ${text_office_management}           Office Management
     Sleep    3
-    #Wait Until Element Contains    ${text_password_success}    Setup Password Success!
-    #Wait Until Element Contains    ${text_password_change}     Password changed successfully, return to homepage to login.
-    #Click Button    ${button_home_popup}
-Create Company  
-    Wait Until Element Contains    ${panel_admin}    Admin
-    Click Element                  ${panel_admin}
-    Click Element                  ${company_management}
-    Click Button                   ${button_create_company}   
-    Wait Until Element Contains    ${text_company_management}    Company Management
-    Wait Until Element Contains    ${text_create_company}        Create company
+    Click Element                  ${panel_product}
+    Sleep    3
+    Click Element                  ${master_category}
+    Wait Until Element Contains    ${element_master_category}          Category
     Sleep    3
     
- Add New Company   
-    #================== Page Create Company ======================================
-    Wait Until Element Contains    ${text_company_name}        Company Name
-    Input Text                     ${input_company_name}       PT Warna Warni Teknologi
-    Wait Until Element Contains    ${text_email_company}       Email
-    Input Text                     ${input_email_company}      warnawarni@teknologi.com
-    Wait Until Element Contains    ${text_input_website}       Website
-    Input Text                     ${input_website_name}       https://warnawarniteknologi.com/
-    Wait Until Element Contains    ${text_phone_number}        Phone Number
-    Input Text                     ${input_phone_number}       08211212
-    Sleep    3
-    
-    Press Key                      ${province}                 TAB
-    Click Element                  ${province}
-    Click Element                  ${choose_province}   
-    Sleep    3 
-
-    Press Key                      ${regency}                  TAB
-    Click Element                  ${regency}    
-    Click Element                  ${choose_regency}
-    Sleep    3
-
-    Press Key                      ${district}                 TAB
-    Click Element                  ${district} 
-    Click Element                  ${choose_district}
-    Sleep    3
-    
-    Press Key                      ${sub_district}             TAB
-    Click Element                  ${sub_district}
-    Click Element                  ${choose_sub_district}
-    Sleep    3
-
-    Press Key                      ${input_street_name}        TAB
-    Input Text                     ${input_street_name}        Jalan Sesama Nomor 18
-    Sleep    3
-
-    Press Key                      ${input_postal_code}        TAB
-    Input Text                     ${input_postal_code}        15234
-    Sleep    3
-
-    Press Key                      ${status_company}           TAB
-    Click Element                  ${status_company}
-    Click Element                  ${choose_status_company}
-    Sleep    3
-
-    Click Button                   ${button_accept_company}    
-
-    #Click Element                  ${drop_down_offic
-    #Select From List By Value      ${drop_down_office}        Office Name
+    Click Element                  ${search_master_category}
+    Input Text                     ${search_master_category}           Test
     Sleep    5s
-    [Teardown]  Close Browser
+    [Teardown]  Close Browser        

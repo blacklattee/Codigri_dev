@@ -11,7 +11,7 @@ ${invalid_password}         id=mui-2
 ${button_login}            xpath=//div[@id='__next']/div/div/div[1]/section/div[6]/button[@type='button']
 ${button_home_popup}       xpath=//button[@type='button']
 ${username_management}     xpath=//*[@id="panel1a-content"]/div/a[1]
-${panel_admin}             xpath=//div[@id='panel1a-header']/div[@class='MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-17o5nyn']
+${panel_admin}             xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1ewveix']/div/div[1]/div[4]/div/div[@role='button']/div[@class='MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-17o5nyn']
 ${list_office}             xpath=//div[@id='menu-']//ul[@role='listbox']/li[1]
 
 
@@ -35,7 +35,12 @@ ${input_phone_number}      xpath=/html//div[@id='__next']/div[@class='MuiBox-roo
 ${button_create_user}      xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']//button[@type='button']
 ${list_dropdown_office_name}   xpath=//div[@id='menu-']//ul[@role='listbox']/li[2]
 ${list_dropdown_company_name}   xpath=//div[@id='menu-']//ul[@role='listbox']/li[2]
-${drop_down_company_name}    xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//div[@class='MuiBox-root css-hv8n5o']/div[@class='MuiBox-root css-0']/div[5]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div[@role='button']
+${list_role_user}            xpath=//div[@id='menu-']//ul[@role='listbox']/li[3]
+${list_status_user}          xpath=//div[@id='menu-']//ul[@role='listbox']/li[2]
+${drop_down_company_name}    xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//div[@class='MuiBox-root css-hv8n5o']/div[@class='MuiBox-root css-0']/div[6]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div[@role='button']
+${drop_down_role_user}       xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//div[@class='MuiBox-root css-hv8n5o']/div[@class='MuiBox-root css-0']/div[7]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div[@role='button']
+${drop_down_status_user}     xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//div[@class='MuiBox-root css-hv8n5o']/div[@class='MuiBox-root css-0']/div[8]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div[@role='button']
+${button_next_step_user}     xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']//button[@type='button']
 ${drop_down_office}          xpath=/html//div[@id='__next']/div[@class='MuiBox-root css-ayjhuo']/div[@class='MuiBox-root css-1hwv2q0']/div[@class='MuiBox-root css-13o7eu2']/div//div[@class='MuiBox-root css-hv8n5o']/div[@class='MuiBox-root css-0']/div[5]/div[@class='MuiBox-root css-j7qwjs']/div[@class='MuiBox-root css-0']/div/div[@role='button']
 #=====================================================================================================
 
@@ -57,7 +62,7 @@ Waiting Browser
     Wait Until Element Contains    ${panel_admin}    Admin
     Click Element                  ${panel_admin}
     Click Element                  ${username_management}
-    Click Button                   ${button_create_user}   
+    Click Element                  ${button_create_user}   
     Wait Until Element Contains    ${text_user_management}    User Management
     Set Browser Implicit Wait    3
     #Wait Until Element Contains    ${text_create_user}        Create user
@@ -71,16 +76,31 @@ Create New User
     Input Text                     ${input_email_address}     rabilfernandaaa@gmail.com
     Wait Until Element Contains    ${text_phone_number}       Phone Number
     Input Text                     ${input_phone_number}      08211212
-    
+
+    Press Key                      ${drop_down_office}        TAB 
     Click Element                  ${drop_down_office}
     Mouse Down                     ${list_dropdown_office_name}
     Click Element                  ${list_dropdown_office_name}
-    
-    Mouse Over                     ${drop_down_company_name}
+    Sleep    3
 
-    #Click Element                ${drop_down_company_name}
-    #Mouse Down                   ${list_dropdown_company_name}
-    #Click Element                ${list_dropdown_company_name}
+    Press Key                      ${drop_down_company_name}    TAB
+    Click Element                  ${drop_down_company_name}
+    Mouse Down                     ${list_dropdown_company_name}
+    Click Element                  ${list_dropdown_company_name}
+    Sleep    3
+
+    Press Key                     ${drop_down_role_user}    TAB
+    Click Element                 ${drop_down_role_user}
+    Mouse Down                    ${list_role_user}
+    Click Element                 ${list_role_user}
+
+    Press Key                     ${drop_down_status_user}    TAB
+    Click Element                 ${drop_down_status_user}
+    Mouse Down                    ${list_status_user}
+    Click Element                 ${list_status_user}
+    Sleep    3
+    Click Button    ${button_next_step_user}
+
 
     #Click Element                  ${drop_down_office}
     #Select From List By Value      ${drop_down_office}        Office Name

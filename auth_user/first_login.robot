@@ -51,8 +51,8 @@ Login_User
     Set Browser Implicit Wait    5
     Element Should Contain    ${TextLoginAccount}          Login Account
     Element Should Contain    ${WelcomeBack}               Welcome back! Please enter your detail.
-    Input Text                ${email}                     super_admin@gmail.com
-    Input Password            ${invalid_password}          rabil123
+    Input Text                ${email}                     rabilfernandaaa@gmail.com
+    Input Password            ${invalid_password}          12345678
     Click Button              ${button_login}
 Input Password Setup
     Element Should Contain    ${text_first_login}          Setup your password!    
